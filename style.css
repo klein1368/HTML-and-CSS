@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    height: 35px;
+    background-color: #ede8f5;
+    padding-top: 10px;
+    z-index: 2;
+}
+
+.nav{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding-top: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.nav a{
+    padding-left: 15px;
+}
+
+.slideshow{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height:250px;
+    margin: 0 auto;
+   background-size: cover;
+   top: 44px;
+}
+
+.slideshow img{
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideshow 4s infinite;
+    width: 100%;
+
+}
+
+.slideshow img:nth-child(1){
+    animation-delay: 0s;
+}
+
+.slideshow img:nth-child(2){
+    animation-delay: 1s;
+}
+
+.slideshow img:nth-child(3){
+    animation-delay: 2s;
+}
+
+.slideshow img:nth-child(4){
+    animation-delay: 3s;
+}
+
+@keyframes slideshow {
+    0% {
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.contenders{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    height: 800px;
+    border: 4px solid #212A31;
+    /* padding-top: 10PX; */
+    background-color: #adbbda;
+}
+
+.img{
+    background-size: contain;
+    height: auto;
+    width: 300px;
+    /* margin-top: 25px; */
+    /* padding-bottom: 10px; */
+}
+
+.imgs{
+    height: 180px;
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-top: 10PX;
+    background-color: #3d52a0;
+    z-index: -1;
+    color: #8697c4;
+}
+
+H2 {
+    padding-bottom: 10px;
+}
+
+button{
+    height: 30px;
+    width: 50px;
+}
+
+.content{
+    text-align: center;
+    font-size: 10px;
+    padding-bottom: 10px;
+}
+
+@media only screen and (min-width: 700px){
+    .slideshow{
+        height:450px;
+    }
+    .content{
+        font-size: 20px;
+    }
+    .imgs{
+        height: 200px;
+    }
+    .img{
+        width: 380px;
+    }
+    .contenders{
+        height: 700px;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .imgs{
+        height: 400px;
+    }
+    .contenders{
+        height: 1000px;
+        width: 95%;
+    }
+    .img{
+        width: 500px;
+    }
+    .img:hover{
+        width: 700px;
+        z-index: 1;
+    }
+    .imgs:hover{
+        height: 420px;
+    }
+    .navbar{
+        height: 50px;
+    }
+    h3{
+        font-size: 25px;
+        padding-top: 6px;
+    }
+    .nav a{
+        padding-left: 63px;
+        font-size: 25px;
+    }
+    .nav{
+        padding-top: 15px;
+    }
+}
